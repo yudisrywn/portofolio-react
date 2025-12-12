@@ -66,18 +66,7 @@ export const VSCodeLayout = ({ children }: VSCodeLayoutProps) => {
 
   return (
     <div className="flex flex-col h-screen bg-vscode-bg text-vscode-text relative">
-      <GridBackgroundDemo
-        sensitivity={0.55}
-        lineThickness={1}
-        linesColor="#392e4e"
-        gridScale={0.1}
-        scanColor="#FF9FFC"
-        scanOpacity={0.4}
-        enablePost
-        bloomIntensity={0.6}
-        chromaticAberration={0.002}
-        noiseIntensity={0.01}
-      />
+      <GridBackgroundDemo />
       {/* Title Bar */}
       <div className="h-9 bg-vscode-sidebar border-b border-vscode-border flex items-center px-2 justify-between">
         <div className="flex items-center gap-2">
