@@ -13,6 +13,7 @@ const Projects = () => {
       status: "Develop",
       github: "https://github.com/yudisrywn/EventVerse",
       live: "#",
+      color: "purple",
     },
     {
       id: 2,
@@ -24,6 +25,7 @@ const Projects = () => {
       status: "Completed",
       github: "https://github.com/yudisrywn/EventVerse",
       live: "#",
+      color: "pink",
     },
     {
       id: 3,
@@ -36,6 +38,7 @@ const Projects = () => {
       status: "Completed",
       github: "https://github.com/yudisrywn/rodhatulHuda",
       live: "#",
+      color: "purple",
     },
   ];
 
@@ -75,7 +78,7 @@ const Projects = () => {
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project) => {
-            const colors = getColorClasses(project.color);
+            const colors = getColorClasses(project.color || "purple");
             return (
               <div
                 key={project.id}

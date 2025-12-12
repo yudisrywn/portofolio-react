@@ -1,5 +1,5 @@
 // import { Github, Linkedin, Mail, Twitter } from "lucide-react";
-import { TypingAnimation } from "@/components/TypingAnimation";
+import { TypingAnimation } from "../components/TypingAnimation";
 
 const Home = () => {
   const codeLines = [
