@@ -82,7 +82,7 @@ export const VSCodeLayout = ({ children }: VSCodeLayoutProps) => {
       <div className="h-9 bg-vscode-sidebar border-b border-vscode-border flex items-center px-2 justify-between">
         <div className="flex items-center gap-2">
           <FileCode className="w-4 h-4 text-syntax-blue" />
-          <span className="text-xs">Portfolio - Yudi</span>
+          <span className="text-xs">Portfolio | Yudi Suryawan</span>
         </div>
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -283,6 +283,9 @@ export const VSCodeLayout = ({ children }: VSCodeLayoutProps) => {
           <span>main</span>
           <span>TypeScript React</span>
           <span>UTF-8</span>
+        </div>
+        <div className="flex items-center gap-4">
+          <span>Copyright © 2025 Yudi. All Rights Reserved</span>
         </div>
         <div className="flex items-center gap-4">
           <span>Ln 1, Col 1</span>
