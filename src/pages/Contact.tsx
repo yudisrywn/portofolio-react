@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Mail, Github, Linkedin, Send, MapPin, Clock } from "lucide-react";
 import { useToast } from "../hooks/use-toast";
+import ScrambledText from "../components/ScrambledText";
+import { TypingAnimation } from "../components/TypingAnimation";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -40,10 +42,12 @@ const Contact = () => {
       <div className="relative max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-elegant-purple via-elegant-pink to-elegant-blue bg-clip-text text-transparent">
-            Get In Touch
+          <h1 className="text-4xl font-bold mb-4 text-blue-600">
+            <ScrambledText>Get In Touch</ScrambledText>
           </h1>
-          <p className=" text-lg">Let's create something together</p>
+          <p className="text-lg">
+            <ScrambledText>Let's create something together</ScrambledText>
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
