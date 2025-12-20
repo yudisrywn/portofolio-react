@@ -1,4 +1,3 @@
-// import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import { TypingAnimation } from "../components/TypingAnimation";
 
 const Home = () => {
@@ -34,7 +33,7 @@ const Home = () => {
       <div className="relative w-full max-w-4xl">
         {/* Code Editor Section */}
         <div className="bg-[#000000] border border-[#131314] rounded-lg overflow-hidden shadow-2xl">
-          {/* macOS Terminal Header */}
+          {/* Terminal Header */}
           <div className="bg-[#1e1f29] px-4 py-3 flex items-center gap-2 border-b border-[#19191e]">
             <div className="flex gap-2">
               <div className="w-3 h-3 rounded-full bg-[#ff5f56]" />

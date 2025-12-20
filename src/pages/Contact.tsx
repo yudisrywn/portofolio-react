@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Mail, Github, Linkedin, Send, MapPin, Clock } from "lucide-react";
 import { useToast } from "../hooks/use-toast";
 import ScrambledText from "../components/ScrambledText";
-import { TypingAnimation } from "../components/TypingAnimation";
 
 const Contact = () => {
   const { toast } = useToast();
