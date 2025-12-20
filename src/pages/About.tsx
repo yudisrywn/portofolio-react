@@ -1,44 +1,9 @@
 import { GraduationCap, Heart } from "lucide-react";
 import Globe from "../components/GlobeAnimate";
 import RotatingText from "../components/RotatingText";
+import OrbitingSkills from "../components/OrbitingTech";
 
 const About = () => {
-  const skills = [
-    {
-      name: "JavaScript",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    },
-    {
-      name: "TypeScript",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-    },
-    {
-      name: "React",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    },
-    {
-      name: "Node.js",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-    },
-    {
-      name: "Express.js",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-    },
-    {
-      name: "Tailwind CSS",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
-    },
-    // { name: "Laravel", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" },
-    {
-      name: "MySQL",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-    },
-    {
-      name: "MongoDB",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-    },
-  ];
-
   return (
     <div className="relative min-h-full p-8 overflow-y-auto">
       {/* Background glow */}
@@ -107,123 +72,7 @@ const About = () => {
           <h2 className="text-2xl font-bold text-foreground mb-6">
             <span className="bg-blue-600">Skills</span>
           </h2>
-          <div
-            className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-8"
-            style={{ perspective: "1000px" }}>
-            {skills.map((skill, index) => (
-              <div
-                key={skill.name}
-                className="group flex flex-col items-center gap-3 p-5 bg-vscode-sidebar/50 backdrop-blur-sm rounded-xl border border-elegant-purple/20 hover:border-elegant-pink/60 hover:bg-vscode-sidebar/80 transition-all duration-500 animate-fade-in cursor-pointer hover:scale-110 hover:shadow-[0_0_30px_rgba(139,92,246,0.4)]"
-                style={{
-                  animationDelay: `${index * 0.1}s`,
-                  transformStyle: "preserve-3d",
-                }}>
-                <div
-                  className="relative w-20 h-20 flex items-center justify-center transition-all duration-700 group-hover:[transform:rotateY(360deg)_scale(1.3)]"
-                  style={{
-                    animation: `float 3s ease-in-out infinite`,
-                    animationDelay: `${index * 0.3}s`,
-                    transformStyle: "preserve-3d",
-                  }}>
-                  {/* 3D Glow Effect - Intensifies on hover */}
-                  <div
-                    className="absolute inset-[-10px] rounded-full bg-elegant-purple/20 blur-xl group-hover:bg-elegant-pink/60 group-hover:inset-[-20px] transition-all duration-500"
-                    style={{ transform: "translateZ(-20px)" }}
-                  />
-
-                  {/* Shadow Layer */}
-                  <div
-                    className="absolute w-14 h-3 bg-elegant-purple/20 rounded-full blur-md group-hover:bg-elegant-pink/40 group-hover:w-16 transition-all duration-500"
-                    style={{
-                      transform:
-                        "translateZ(-30px) translateY(35px) rotateX(90deg)",
-                      animation: `pulse-glow 3s ease-in-out infinite`,
-                      animationDelay: `${index * 0.3}s`,
-                    }}
-                  />
-
-                  {/* Main Logo with 3D Effect */}
-                  <div
-                    className="relative transition-all duration-500"
-                    style={{
-                      transform: "translateZ(25px)",
-                      filter:
-                        "drop-shadow(0 10px 20px rgba(139, 92, 246, 0.3))",
-                      transformStyle: "preserve-3d",
-                    }}>
-                    <img
-                      src={skill.icon}
-                      alt={skill.name}
-                      className="w-14 h-14 object-contain group-hover:w-16 group-hover:h-16 transition-all duration-500"
-                      style={{
-                        filter: "drop-shadow(2px 2px 4px rgba(0,0,0,0.3))",
-                      }}
-                    />
-                  </div>
-
-                  {/* Floating Particles - More visible on hover */}
-                  <div
-                    className="absolute w-2 h-2 bg-elegant-purple rounded-full opacity-40 group-hover:opacity-100 group-hover:w-3 group-hover:h-3 transition-all duration-300"
-                    style={{
-                      animation: `float 2s ease-in-out infinite`,
-                      animationDelay: `${index * 0.2}s`,
-                      top: "-5px",
-                      left: "15%",
-                    }}
-                  />
-                  <div
-                    className="absolute w-2 h-2 bg-elegant-pink rounded-full opacity-30 group-hover:opacity-90 group-hover:w-2.5 group-hover:h-2.5 transition-all duration-300"
-                    style={{
-                      animation: `float 2.5s ease-in-out infinite reverse`,
-                      animationDelay: `${index * 0.4}s`,
-                      bottom: "0",
-                      right: "5%",
-                    }}
-                  />
-                  <div
-                    className="absolute w-1.5 h-1.5 bg-elegant-blue rounded-full opacity-0 group-hover:opacity-80 transition-all duration-300"
-                    style={{
-                      animation: `float 1.8s ease-in-out infinite`,
-                      animationDelay: `${index * 0.5}s`,
-                      top: "15%",
-                      right: "-5px",
-                    }}
-                  />
-                  <div
-                    className="absolute w-1 h-1 bg-elegant-purple rounded-full opacity-0 group-hover:opacity-70 transition-all duration-300"
-                    style={{
-                      animation: `float 2.2s ease-in-out infinite reverse`,
-                      animationDelay: `${index * 0.6}s`,
-                      bottom: "20%",
-                      left: "-5px",
-                    }}
-                  />
-
-                  {/* Sparkle Effects on Hover */}
-                  <div
-                    className="absolute w-1 h-1 bg-white rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"
-                    style={{
-                      animation: `pulse-glow 1s ease-in-out infinite`,
-                      top: "10%",
-                      left: "50%",
-                    }}
-                  />
-                  <div
-                    className="absolute w-0.5 h-0.5 bg-white rounded-full opacity-0 group-hover:opacity-80 transition-all duration-300"
-                    style={{
-                      animation: `pulse-glow 1.2s ease-in-out infinite`,
-                      animationDelay: "0.3s",
-                      bottom: "15%",
-                      left: "30%",
-                    }}
-                  />
-                </div>
-                <span className="text-vscode-text-muted text-sm font-semibold text-center group-hover:text-elegant-pink group-hover:scale-105 transition-all duration-300">
-                  {skill.name}
-                </span>
-              </div>
-            ))}
-          </div>
+          <OrbitingSkills />
         </div>
 
         {/* Experience & Education */}
