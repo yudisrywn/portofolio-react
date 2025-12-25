@@ -9,7 +9,6 @@ import {
   User,
   Briefcase,
   Mail,
-  Menu,
   X,
   FileText,
   Bot,
@@ -38,7 +37,6 @@ const navItems: NavItem[] = [
 
 export const VSCodeLayout = ({ children }: VSCodeLayoutProps) => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openTabs, setOpenTabs] = useState<string[]>(["/"]);
   const [pagesExpanded, setPagesExpanded] = useState(true);
   const [aiChatOpen, setAiChatOpen] = useState(false);
@@ -61,7 +59,6 @@ export const VSCodeLayout = ({ children }: VSCodeLayoutProps) => {
       setOpenTabs([...openTabs, path]);
     }
     navigate(path);
-    setMobileMenuOpen(false);
   };
 
   return (
@@ -73,15 +70,6 @@ export const VSCodeLayout = ({ children }: VSCodeLayoutProps) => {
           <FileCode className="w-4 h-4 text-syntax-blue" />
           <span className="text-xs">Portfolio | Yudi Suryawan</span>
         </div>
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden p-1 hover:bg-vscode-border rounded">
-          {mobileMenuOpen ? (
-            <X className="w-4 h-4" />
-          ) : (
-            <Menu className="w-4 h-4" />
-          )}
-        </button>
       </div>
 
       <div className="flex flex-1 overflow-hidden">
@@ -118,7 +106,7 @@ export const VSCodeLayout = ({ children }: VSCodeLayoutProps) => {
           className={`${
             sidebarOpen ? "w-64" : "w-0"
           } bg-vscode-sidebar border-r border-vscode-border transition-all duration-300 overflow-hidden md:block ${
-            mobileMenuOpen
+            sidebarOpen
               ? "block absolute left-12 top-9 h-full z-50"
               : "hidden md:block"
           }`}>
