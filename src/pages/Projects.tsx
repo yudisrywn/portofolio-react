@@ -40,6 +40,19 @@ const Projects = () => {
       live: "#",
       color: "purple",
     },
+    {
+      id: 4,
+      title: "Banana Rippes Level Detection",
+      description:
+        "Detection of banana ripeness in three levels, namely unripe, ripe, and rotten, using CNN architecture.",
+      image:
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop",
+      tech: ["Python"],
+      status: "Completed",
+      github: "https://github.com/yudisrywn/",
+      live: "#",
+      color: "purple",
+    },
   ];
 
   const getColorClasses = (color: string) => {
@@ -72,7 +85,11 @@ const Projects = () => {
           <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-elegant-purple via-elegant-pink to-elegant-blue bg-clip-text text-transparent">
             My Projects
           </h1>
-          <p className="text-lg">A collection of projects I've worked on</p>
+          <p className="text-lg">
+            <span className="bg-blue-600">
+              A collection of projects I've worked on
+            </span>
+          </p>
         </div>
 
         {/* Projects Grid */}
