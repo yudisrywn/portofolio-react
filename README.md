@@ -10,7 +10,7 @@
 <img width="1365" height="677" alt="image" src="https://github.com/user-attachments/assets/5257dac9-7ee2-401f-9a52-b878202db44e" />
 <img width="1365" height="679" alt="image" src="https://github.com/user-attachments/assets/e9fea230-d136-4e64-8d0d-a18e99e03007" />
 <img width="1365" height="674" alt="image" src="https://github.com/user-attachments/assets/fad9dec1-a43d-4217-8abf-7b8e9a06e3fa" />
-<div style="center"><a href="https://yudisuryawan.vercel.app/">🚀Live Demo</a></div>
+<div class="center"><a href="https://yudisuryawan.vercel.app/">🚀Live Demo</a></div>
 
 ## 🚀Installation
 1. Clone repository
