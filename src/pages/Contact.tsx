@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Mail, Github, Linkedin, Send, MapPin, Clock } from "lucide-react";
 import { useToast } from "../hooks/use-toast";
 import ScrambledText from "../components/ScrambledText";
+import Swal from "sweetalert2";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -105,9 +106,16 @@ const Contact = () => {
               </div>
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-elegant-purple via-elegant-pink to-elegant-blue text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-elegant-purple/30 transition-all transform hover:scale-105">
+                className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-elegant-purple via-elegant-pink to-elegant-blue text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-elegant-purple/30 transition-all transform hover:scale-105"
+                onClick={() => {
+                  Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Fitur masih dalam tahap pengembangan!",
+                  });
+                }}>
                 <Send className="w-5 h-5" />
-                Send Message
+                Send Massage
               </button>
             </form>
           </div>

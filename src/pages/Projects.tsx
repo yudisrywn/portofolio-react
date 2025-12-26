@@ -138,7 +138,7 @@ const Projects = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg border hover:shadow-lg transition-all hover:bg-blue-500">
+                      className="flex items-center gap-2 px-4 py-2 rounded-lg border hover:shadow-lg transition-all hover:bg-blue-500 hover:shadow-blue-600">
                       <Github className="w-4 h-4" />
                       <span>Code</span>
                     </a>
@@ -147,7 +147,7 @@ const Projects = () => {
                         href={project.live}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 rounded-lg hover:shadow-lg transition-all text-white hover:text-blue-600">
+                        className="flex items-center gap-2 px-4 py-2 hover:shadow-lg transition-all text-white hover:text-blue-600 hover: rounded-lg hover: border hover:shadow-blue-800">
                         <ExternalLink className="w-4 h-4" />
                         <span>Live Demo</span>
                       </a>
